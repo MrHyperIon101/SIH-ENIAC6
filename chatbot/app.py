@@ -16,7 +16,7 @@ user_data = {}
 cities_museums = {
     'Delhi': {'National Museum': ['national', 'nm'], 'Rail Museum': ['rail', 'rm']},
     'Mumbai': {'Chhatrapati Shivaji Maharaj Vastu Sangrahalaya': ['csmvs', 'chhatrapati'], 'Dr. Bhau Daji Lad Museum': ['bdl', 'bhau', 'dbdl', 'dbdlm']},
-    'TEST': {'TEST Museum': ['test', 'tm']},
+    'XTEST': {'TEST Museum': ['test', 'tm']},
     'Kolkata': {'Indian Museum': ['indian', 'im'], 'Victoria Memorial': ['victoria', 'vm']},
     'Chennai': {'Government Museum': ['government', 'gm'], 'Fort Museum': ['fort', 'fm']},
     'Bengaluru': {'Visvesvaraya Industrial and Technological Museum': ['vitm', 'visvesvaraya'], 'National Gallery of Modern Art': ['ngma', 'national gallery']}
