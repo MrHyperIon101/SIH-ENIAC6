@@ -57,7 +57,9 @@ By following these steps, you will have all the necessary modules installed to r
 Now you can finally work on this code. Collaborate and add more features as much as you want. After your work is complete, do the following steps in order to upload it again to your forked repo:
 1. Navigate to your project directory:
 
--cd SIH.2024.ENIAC6
+   ```bash
+   cd SIH.2024.ENIAC6
+   ```
 
 2. For those working on code:
 
