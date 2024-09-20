@@ -1,5 +1,5 @@
 ![Tux](img/tux.png)
-# SIH.2024.ENIAC6
+# Smart India Hackathon 2024-ENIAC6
 
 Welcome to the **Smart India Hackathon 2024-ENIAC6** project! This guide will help you set up your environment and contribute to the project effectively.
 
