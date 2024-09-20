@@ -1,7 +1,7 @@
 ![Tux](img/tux.png)
-# Smart India Hackathon 2024-ENIAC6
+# Welcome To Smart India Hackathon, ENIAC 6!
 
-Welcome to the **Smart India Hackathon 2024-ENIAC6** project! This guide will help you set up your environment and contribute to the project effectively.
+Welcome to the **Online Chatbot based ticketing system, By Ministry Of Culture** project! This guide will help you set up your environment and contribute to the project effectively.
 
 ## Collaboration Steps
 
