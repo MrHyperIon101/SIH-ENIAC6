@@ -29,7 +29,7 @@ _For those who want to collaborate on GitHub, follow the steps below:_
      ```
    - Then type:
      ```bash
-     code .
+     code ./
      ```
    - This will open a VS Code window with your directory connected.
 
@@ -46,8 +46,10 @@ _To run the provided Flask application, you need to install several Python modul
 ## Download necessary NLTK data:
 In your Python script or interpreter, run:
 python
-import nltk
-nltk.download('punkt')
+   ```bash
+   import nltk
+   nltk.download('punkt')
+   ```
 
 By following these steps, you will have all the necessary modules installed to run your Flask application._
 
@@ -59,27 +61,45 @@ Now you can finally work on this code. Collaborate and add more features as much
 
 2. For those working on code:
 
--cd chatbot
+   ```bash
+   cd chatbot
+   ```
 
 3. For frontend team:
 - First execute the above line, then:
-cd static  # For CSS
-cd templates  # For HTML
+   ```bash
+   cd static  # For CSS
+   ```
+   ```bash
+   cd templates  # For HTML
+   ```
 
 4. Initialize Git (if not already initialized):
 
--git init
+   ```bash
+   git init
+   ```
 
 5. Check status and stage changes:
 
--git status
--git add <file-name>
--git status  # Ensure file is staged
+   ```bash
+   git status
+   ```
+      ```bash
+   git add <file-name>
+   ```
+      ```bash
+   git status #Ensure file is staged
+   ```
 
 6. Commit and push changes:
 
--git commit -m "Updated by 'Your Name'"
--git push
+      ```bash
+   git commit -m "Updated by Your Name"
+   ```
+      ```bash
+   git push
+   ```
 
 Congratulations!
 You have successfully completed all the steps! Happy collaborating!
