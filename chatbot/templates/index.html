@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art Concierge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div class="chat-overlay">
+            <div class="overlay-content">
+                <p>Welcome to The Art Concierge!</p>
+                <button id="startChat">Start Chat</button>
+            </div>
+        </div>
+        <div class="chat-container">
+            <h2>Chat with The Art Concierge</h2>
+            <div id="chatbox">
+                <!-- Messages will appear here -->
+            </div>
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <div class="watermark">Made By ENIAC 6</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#startChat').click(function() {
+                $('.chat-overlay').fadeOut(500, function() {
+                    $('.chat-container').fadeIn(500, function() {
+                        var greetingMessage = "Hello! Welcome to The Art Concierge. Which city would you like to visit? Here are the options: Delhi, Mumbai, Kolkata, Chennai, Bengaluru.";
+                        typeMessage(greetingMessage);
+                    });
+                });
+            });
+
+            $('#sendButton').click(sendMessage);
+            $('#userInput').keypress(function(e) {
+                if (e.which == 13) {
+                    sendMessage();
+                }
+            });
+
+            function sendMessage() {
+                var userMessage = $('#userInput').val();
+                if (userMessage.trim() === '') return;
+                $('#chatbox').append('<div class="message user-msg">' + userMessage + '</div>');
+                $('#userInput').val('');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/get_response",
+                    data: { message: userMessage },
+                    success: function(response) {
+                        typeMessage(response.response.replace(/\n/g, '<br>'));
+                    }
+                });
+            }
+
+            function typeMessage(message) {
+                var index = 0;
+                var typingMessage = '';
+                var interval = setInterval(function() {
+                    typingMessage += message.charAt(index);
+                    if (index === 0) {
+                        $('#chatbox').append('<div class="message bot-msg"></div>');
+                    }
+                    $('#chatbox').find('.bot-msg:last').html(typingMessage);
+                    $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+                    index++;
+                    if (index >= message.length) {
+                        clearInterval(interval);
+                    }
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html>
