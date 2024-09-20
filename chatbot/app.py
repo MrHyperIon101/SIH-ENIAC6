@@ -16,6 +16,7 @@ user_data = {}
 cities_museums = {
     'Delhi': {'National Museum': ['national', 'nm'], 'Rail Museum': ['rail', 'rm']},
     'Mumbai': {'Chhatrapati Shivaji Maharaj Vastu Sangrahalaya': ['csmvs', 'chhatrapati'], 'Dr. Bhau Daji Lad Museum': ['bdl', 'bhau', 'dbdl', 'dbdlm']},
+    'TEST': {'TEST Museum': ['test', 'tm']},
     'Kolkata': {'Indian Museum': ['indian', 'im'], 'Victoria Memorial': ['victoria', 'vm']},
     'Chennai': {'Government Museum': ['government', 'gm'], 'Fort Museum': ['fort', 'fm']},
     'Bengaluru': {'Visvesvaraya Industrial and Technological Museum': ['vitm', 'visvesvaraya'], 'National Gallery of Modern Art': ['ngma', 'national gallery']}
@@ -43,7 +44,7 @@ def display_booking_details(user_info):
         f"Name: {user_info['name'].title()}\n"
         f"Age: {user_info['age']}\n"
         f"Email: {user_info['email']}\n"
-        f"Contact No: {user_info['phone']}\n"
+        f"Contact No: {user_info['phone']}\n"   
         f"City: {user_info['city']}\n"
         f"Museum: {user_info['museum']}\n"
         f"Date of Visit: {user_info['visit_date']}\n"
